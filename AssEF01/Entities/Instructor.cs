@@ -27,5 +27,8 @@ namespace AssEF01.Entities
 
         [ForeignKey("Department")]
         public int Dept_ID { get; set; }
+
+        public Department Department { get; set; }
+        public ICollection<Course_Inst> Course_Insts { get; set; } = new List<Course_Inst>();
     }
 }
